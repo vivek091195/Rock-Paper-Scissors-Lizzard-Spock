@@ -1,9 +1,9 @@
 const CONTROL_OPTIONS_ENUM = {
-  ROCK: 'rock',
-  PAPER: 'paper',
   SCISSOR: 'scissor',
-  LIZARD: 'lizard',
+  PAPER: 'paper',
   SPOCK: 'spock',
+  ROCK: 'rock',
+  LIZARD: 'lizard',
 };
 
 export { CONTROL_OPTIONS_ENUM };

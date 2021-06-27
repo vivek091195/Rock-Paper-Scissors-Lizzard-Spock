@@ -20,7 +20,7 @@ const ScoreWrapper = styled.div`
   align-items: center;
   padding: 2%;
   height: 9vw;
-  width: 10vw;
+  width: 11vw;
 `;
 
 const Label = styled.div`

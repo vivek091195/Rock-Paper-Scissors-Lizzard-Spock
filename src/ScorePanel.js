@@ -8,13 +8,13 @@ import {
   Value,
 } from './ScorePanel.style';
 
-const ScorePanel = () => {
+const ScorePanel = ({ score }) => {
   return (
     <ScorePanelWrapper>
       <SVGWrapper height="9vw" width="9vw" src={Logo} />
       <ScoreWrapper>
         <Label>Score</Label>
-        <Value>12</Value>
+        <Value>{score}</Value>
       </ScoreWrapper>
     </ScorePanelWrapper>
   );

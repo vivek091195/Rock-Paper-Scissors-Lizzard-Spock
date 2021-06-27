@@ -13,19 +13,36 @@ import { PlayGameWindow } from './PlayGameWindow';
 import { useControl } from './hooks/useControl';
 
 const LandingPage = () => {
-  const { showInitialScreen, setShowInitialScreen, onOptionClickHandler } =
-    useControl();
+  const {
+    userSelection,
+    setUserSelection,
+    houseSelection,
+    setHouseSelection,
+    resetClickHandler,
+    winnerDecider,
+    result,
+    score,
+  } = useControl();
   return (
     <GameWrapper>
       <LeftPanel></LeftPanel>
       <MiddlePanel>
         <TopWrapper>
-          <ScorePanel />
+          <ScorePanel score={score} />
         </TopWrapper>
-        {showInitialScreen ? (
-          <InitialGameWindow onOptionClickHandler={onOptionClickHandler} />
+        {!userSelection ? (
+          <InitialGameWindow
+            setUserSelection={setUserSelection}
+            setHouseSelection={setHouseSelection}
+            winnerDecider={winnerDecider}
+          />
         ) : (
-          <PlayGameWindow />
+          <PlayGameWindow
+            UserPickedOptionComponent={userSelection}
+            HousePickedOptionComponent={houseSelection}
+            resetClickHandler={resetClickHandler}
+            result={result}
+          />
         )}
       </MiddlePanel>
       <RightPanel>

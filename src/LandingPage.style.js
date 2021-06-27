@@ -7,17 +7,17 @@ const GameWrapper = styled.div`
 `;
 
 const LeftPanel = styled.div`
-  width: 20%;
+  width: 15%;
 `;
 
 const MiddlePanel = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 70%;
 `;
 
 const RightPanel = styled.div`
-  width: 20%;
+  width: 15%;
 `;
 
 const TopWrapper = styled.div`
@@ -25,7 +25,7 @@ const TopWrapper = styled.div`
   border-radius: 5px;
   height: 30%;
   align-items: center;
-  padding: 0 2vw;
+  padding: 0 6vw;
 `;
 
 const RulesPanel = styled.div``;
