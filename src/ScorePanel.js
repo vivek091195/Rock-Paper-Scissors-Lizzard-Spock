@@ -1,5 +1,4 @@
 import React from 'react';
-import Logo from './assets/svgs/logo.svg';
 import {
   ScorePanelWrapper,
   SVGWrapper,
@@ -7,11 +6,12 @@ import {
   Label,
   Value,
 } from './ScorePanel.style';
+import { Logo } from './icons';
 
 const ScorePanel = ({ score }) => {
   return (
     <ScorePanelWrapper>
-      <SVGWrapper height="9vw" width="9vw" src={Logo} />
+      <SVGWrapper src={Logo} height="9rem" width="9rem" />
       <ScoreWrapper>
         <Label>Score</Label>
         <Value>{score}</Value>

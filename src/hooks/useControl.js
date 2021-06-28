@@ -5,6 +5,7 @@ const WIN = 1;
 const LOSE = -1;
 const TIE = 0;
 const LOCALSTORAGE_KEY = 'game_score';
+const TOTAL_OPTIONS = 5;
 
 const useControl = () => {
   const [userSelection, setUserSelection] = useState(null);
@@ -27,13 +28,12 @@ const useControl = () => {
       setResult(0);
       return;
     }
-    const { ROCK, PAPER, SCISSOR, SPOCK, LIZARD } = CONTROL_OPTIONS_ENUM;
     const resultDecidingObject = {
-      [ROCK]: { defeats: [SCISSOR, LIZARD] },
-      [PAPER]: { defeats: [ROCK, SPOCK] },
-      [SCISSOR]: { defeats: [PAPER, LIZARD] },
-      [LIZARD]: { defeats: [PAPER, SPOCK] },
-      [SPOCK]: { defeats: [SCISSOR, ROCK] },
+      rock: { defeats: ['scissor', 'lizard'] },
+      paper: { defeats: ['rock', 'spock'] },
+      scissor: { defeats: ['paper', 'lizard'] },
+      lizard: { defeats: ['paper', 'spock'] },
+      spock: { defeats: ['scissor', 'rock'] },
     };
     const picker = resultDecidingObject[option1];
     if (picker.defeats.includes(option2)) {
@@ -53,6 +53,18 @@ const useControl = () => {
     }
   };
 
+  const onOptionClickHandler = (e, optionPanel) => {
+    setUserSelection(optionPanel);
+    setTimeout(() => {
+      const randomNumber = Math.floor(Math.random() * TOTAL_OPTIONS);
+      const optionsArray = Object.keys(CONTROL_OPTIONS_ENUM);
+      const option = optionsArray[randomNumber];
+      const optionDetail = CONTROL_OPTIONS_ENUM[option];
+      setHouseSelection(optionDetail);
+      winnerDecider(optionPanel.label, optionDetail.label);
+    }, 1000);
+  };
+
   return {
     userSelection,
     setUserSelection,
@@ -60,6 +72,7 @@ const useControl = () => {
     setHouseSelection,
     resetClickHandler,
     winnerDecider,
+    onOptionClickHandler,
     result,
     score,
   };

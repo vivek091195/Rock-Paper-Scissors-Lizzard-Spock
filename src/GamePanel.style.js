@@ -9,11 +9,7 @@ const GameWindowPanelWrapper = styled.div`
 `;
 
 const SVGWrapper = styled.img`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: ${(props) => props.height || '60%'};
 `;
 
 const ShapeContainer = styled.div`
@@ -25,12 +21,16 @@ const ShapeContainer = styled.div`
 `;
 
 const OptionContainer = styled.div`
-  width: 11vw;
-  height: 11vw;
+  width: 9rem;
+  height: 9rem;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  ${({ customCSS }) => customCSS};
 `;
 
 export { GameWindowPanelWrapper, SVGWrapper, ShapeContainer, OptionContainer };

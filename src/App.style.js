@@ -18,6 +18,7 @@ const AppWrapper = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 2rem;
 `;
 
 export { GlobalStyle, AppWrapper };

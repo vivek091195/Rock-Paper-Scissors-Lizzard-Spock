@@ -4,36 +4,35 @@ const ScorePanelWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 1.5vw 2vw;
+  width: 60%;
   border: 4px solid hsl(217, 16%, 45%);
-  border-radius: 20px;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
 `;
 
 const ScoreWrapper = styled.div`
   background: white;
-  width: 15%;
-  border-radius: 10px;
+  border-radius: 0.7rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2%;
-  height: 9vw;
-  width: 11vw;
+  padding: 0.8rem;
+  height: 9rem;
+  width: 11rem;
 `;
 
 const Label = styled.div`
   color: hsl(229, 64%, 46%);
   text-transform: uppercase;
-  font-size: 1.5vw;
-  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 `;
 
 const Value = styled.div`
   color: hsl(229, 25%, 31%);
-  font-size: 5.7vw;
-  margin-top: -0.5vw;
+  font-size: 5rem;
+  margin-top: -0.3rem;
 `;
 
 const SVGWrapper = styled.img`
