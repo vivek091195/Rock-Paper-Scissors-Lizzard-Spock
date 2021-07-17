@@ -1,27 +1,33 @@
 import styled from 'styled-components';
+import { CustomPlaceholderIconWrapper } from './StyleConfig';
 
 const GameWindowPanelWrapper = styled.div`
   display: flex;
   height: 70%;
-  width: 80%;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 const UserSelectionPanel = styled.div`
-  width: 35%;
+  flex: 1;
   position: relative;
 `;
 
 const ResultWindow = styled.div`
-  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const HouseSelectionPanel = styled.div`
-  width: 35%;
+  flex: 1;
   position: relative;
 `;
 
@@ -35,8 +41,7 @@ const Label = styled.div`
 `;
 
 const DefaultWrapper = styled.div`
-  width: 20rem;
-  height: 20rem;
+  ${CustomPlaceholderIconWrapper};
   background: #17223e;
   border-radius: 50%;
   position: absolute;

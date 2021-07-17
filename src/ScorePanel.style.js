@@ -8,6 +8,9 @@ const ScorePanelWrapper = styled.div`
   border: 4px solid hsl(217, 16%, 45%);
   border-radius: 1rem;
   padding: 1.5rem 2rem;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ScoreWrapper = styled.div`

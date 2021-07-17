@@ -18,7 +18,7 @@ const GamePanel = ({ customCSS = null, onOptionClickHandler }) => {
             customCSS={customCSS || CONTROL_OPTIONS_ENUM[key].styles}
             onClick={(e) => onOptionClickHandler(e, CONTROL_OPTIONS_ENUM[key])}
           >
-            <SVGWrapper src={CONTROL_OPTIONS_ENUM[key].icon} />
+            <SVGWrapper src={CONTROL_OPTIONS_ENUM[key].icon} height="60%" />
           </OptionContainer>
         );
       })}
