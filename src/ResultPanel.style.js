@@ -20,7 +20,7 @@ const ResultWindow = styled.div`
   align-items: center;
   @media only screen and (max-width: 768px) {
     position: absolute;
-    bottom: 10%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
   }

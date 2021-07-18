@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameWrapper } from './LandingPage.style';
+import { GameWrapper, RulesPanel } from './LandingPage.style';
 import { ScorePanel } from './ScorePanel';
 import { GamePanel } from './GamePanel';
 import { ResultPanel } from './ResultPanel';
@@ -27,6 +27,7 @@ const LandingPage = () => {
           result={result}
         />
       )}
+      <RulesPanel>Rules</RulesPanel>
     </GameWrapper>
   );
 };
