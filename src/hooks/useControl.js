@@ -11,6 +11,7 @@ const useControl = () => {
   const [userSelection, setUserSelection] = useState(null);
   const [houseSelection, setHouseSelection] = useState(null);
   const [result, setResult] = useState(TIE);
+  const [showOverlay, setShowOverlay] = useState(false);
   const [score, setScore] = useState(
     parseInt(localStorage.getItem(LOCALSTORAGE_KEY), 10) || 0
   );
@@ -75,6 +76,8 @@ const useControl = () => {
     onOptionClickHandler,
     result,
     score,
+    showOverlay,
+    setShowOverlay,
   };
 };
 

@@ -10,6 +10,7 @@ const GameWindowPanelWrapper = styled.div`
 
 const SVGWrapper = styled.img`
   height: ${(props) => props.height || '60%'};
+  object-fit: cover;
   @media only screen and (max-width: 768px) {
     height: ${(props) => props.height || '56%'};
   }
