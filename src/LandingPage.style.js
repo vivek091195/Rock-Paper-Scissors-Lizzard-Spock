@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const GameWrapper = styled.div`
   height: 100%;
@@ -78,5 +78,4 @@ const Heading = styled.div`
     font-size: 3rem;
   }
 `;
-
 export { GameWrapper, RulesPanel, Overlay, Modal, ModalHeader, Heading };
